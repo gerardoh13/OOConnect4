@@ -1,0 +1,115 @@
+body {
+  background-color: rgb(17, 22, 22);
+}
+form {
+  color: white;
+}
+button {
+  background-color: rgb(85, 32, 211);
+  height: 40px;
+  color: white;
+  font-size: large;
+}
+/* game board table */
+#board {
+  margin: auto;
+}
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 12px #251a9b;
+  position: relative;
+}
+#pannel {
+  width: 515px;
+  min-height: 70px;
+
+  text-align: center;
+  margin: auto;
+}
+.boardLegs {
+  border-left: solid 12px #1e1392;
+  border-right: solid 12px #1e1392;
+}
+.roundDiv {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  left: -12px;
+  border: solid 12px #251a9b;
+}
+#column-top td {
+  padding: 7px;
+}
+.drop {
+  animation: drop 0.5s ease forwards;
+}
+@keyframes drop {
+  0% {
+    transform: translateY(-500px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(-50px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  90% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  font-family: sans-serif;
+  font-style: italic;
+}
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  left: 1px;
+  bottom: 0px;
+  z-index: -1;
+  /* testing */
+  position: absolute;
+  border: solid 5px rgb(255, 255, 255);
+
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+  cursor: pointer;
+}
+.spin {
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
